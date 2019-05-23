@@ -3,6 +3,10 @@ require_relative("models/movie")
 require_relative("models/casting")
 require("pry")
 
+Movie.delete_all()
+Star.delete_all()
+Casting.delete_all()
+
 # Setup
 movie_1 = Movie.new({
   "title" => "The Fellowship of the Ring",
@@ -25,6 +29,12 @@ movie_5 = Movie.new({
   "genre" => "Superhero"
 })
 
+movie_1.save()
+movie_2.save()
+movie_3.save()
+movie_4.save()
+movie_5.save()
+
 star_1 = Star.new({
   "first_name" => "Tom",
   "last_name" => "Cruise"
@@ -46,24 +56,48 @@ star_5 = Star.new({
   "last_name" => "Hanks"
 })
 
+star_1.save()
+star_2.save()
+star_3.save()
+star_4.save()
+star_5.save()
+
 casting_1 = Casting.new({
+  "movie_id" => movie_1.id,
+  "star_id" => star_1.id,
   "fee" => 100000
 })
 casting_2 = Casting.new({
+  "movie_id" => movie_1.id,
+  "star_id" => star_2.id,
   "fee" => 200000
 })
 casting_3 = Casting.new({
+  "movie_id" => movie_1.id,
+  "star_id" => star_3.id,
   "fee" => 300000
 })
 casting_4 = Casting.new({
+  "movie_id" => movie_2.id,
+  "star_id" => star_4.id,
   "fee" => 400000
 })
 casting_5 = Casting.new({
+  "movie_id" => movie_3.id,
+  "star_id" => star_5.id,
   "fee" => 500000
 })
 casting_5 = Casting.new({
+  "movie_id" => movie_5.id,
+  "star_id" => star_5.id,
   "fee" => 600000
 })
+
+casting_1.save()
+casting_2.save()
+casting_3.save()
+casting_4.save()
+casting_5.save()
 
 binding.pry
 nil
