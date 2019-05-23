@@ -10,23 +10,28 @@ Casting.delete_all()
 # Setup
 movie_1 = Movie.new({
   "title" => "The Fellowship of the Ring",
-  "genre" => "Fantasy"
+  "genre" => "Fantasy",
+  "budget" => 50000000
 })
 movie_2 = Movie.new({
   "title" => "The Hunt for the Wilderpeople",
-  "genre" => "Comedy"
+  "genre" => "Comedy",
+  "budget" => 50000000
 })
 movie_3 = Movie.new({
   "title" => "Star Wars: A New Hope",
-  "genre" => "Sci-Fi"
+  "genre" => "Sci-Fi",
+  "budget" => 50000000
 })
 movie_4 = Movie.new({
   "title" => "2001: A Space Oddessy",
-  "genre" => "Sci-Fi"
+  "genre" => "Sci-Fi",
+  "budget" => 50000000
 })
 movie_5 = Movie.new({
   "title" => "Avengers: Endgame",
-  "genre" => "Superhero"
+  "genre" => "Superhero",
+  "budget" => 50000000
 })
 
 movie_1.save()
