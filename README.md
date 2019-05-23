@@ -6,8 +6,8 @@ But help is at hand, because they've given you a spec to work to:
 
 ## the new IMDB should have:
   - Movies
-    - title []
-    - genre []
+    - title - [X]
+    - genre - []
 
   - :star: Stars :star:
     - first name
